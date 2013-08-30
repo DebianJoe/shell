@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Pipes are easy, they're just using the output of one program as the input for another.
+ls -l | sed -e "s/[aeio]/u/g"
+
+#Local variables in bash:
+
+HELLO=Hello
+function hello {
+	local HELLO=World
+	echo $HELLO
+}
+echo $HELLO
+hello
+echo $HELLO
