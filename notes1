@@ -13,3 +13,12 @@ function hello {
 echo $HELLO
 hello
 echo $HELLO
+
+#Builtins: Bash has some basic commands built in.
+#Keywords Keywords are like builtins, but have different parsing rules.
+#[ is a builtin
+#[[ is a bash keyword
+
+#To determine the difference, you can use the 'type' command
+
+#ie: type rm or type cd...rm is hashed, while cd is a builtin
