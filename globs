@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# GLOBS...wildcards for bash.
+
+# * matches any string, including null.
+# ? matches any single character.
+# [...] matches any one of the enclosed characters.
+
+# Bash also supports extended globs, which can be turned on with
+# shopt -s extglob ## SHell OPTions.
+
+#?(list) matches zero or one occurence of the given patterns.
+#*(list) matches zero or more of the given patterns.
+#+(list) matches one or more of the given patters.
+#@(list) matches one of the given patterns.
+#!(list) matches anything EXCEPT the given pattern.
