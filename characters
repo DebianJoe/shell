@@ -1,0 +1,29 @@
+$ = expansion character.  Used in substitutions, ie: variables
+
+'foobar' = single quotes protect the text inside from any kind of expansion by the shell and keep it from being split into words or arguments.  They also prevent the usage of special characters used inside of them.
+
+"foobar" = double quotes protect the text inside from any kind of expansion by the shell, BUT allow substitutions to occur.  They prevent MOST special meanings from characters--basically...all but $VARIABLES.
+
+# = comments.
+
+; = Command seperator.  Seperates multiple commands from each other.
+
+\ = escape character.
+
+~ = a home directory.
+
+> or < = redirection commands.  Used to modify (redirect) input or output of a command.
+
+| = pipes allow you to send output from one command as input to another.
+
+[[ expression ]] = Test expression.  Evaluation with boolean return.
+
+{ commands; } = Command grouping.  The commands inside the braces are treated as only one command.
+
+`command` or $(command) = allows nesting of commands.  Use the $(foo) one.  It's preferred.
+
+(command) = subshell execution.  Executes command in a new bash shell instead of the current one.
+
+((expression)) = arithmetic command.  Allows mathmatical evaluation.
+
+$((expression)) = arithmetic substitution. Like the above, but the expression is replaced with the result of the its arithmetic evaluation.
