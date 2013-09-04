@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# There's an issue with $VARIABLES that needs to be discussed
+# it's the main reason to put quotes around EVERY parameter expansion.
+
+# $ song="My song.mp3"
+# $ rm $song
+# rm: My: No such file or directory
+# rm: song.mp3: no such file or directory
+
+# this is because it expands out to ($ rm My song.mp3), which is invalid.
+# but rm "$song" would have worked. ;)
+
+
+#SPECIAL Parameters
+# "$0" contains the name/or path of the script.  Not always reliable.
+# "$1" argvs for bash
+# "$*" expands to ALL words of all argvs.
+# "$@" expands to all words of the argvs, putting them into a list.
+# "$#" expands to the number of argvs (int argc)
+# "$?" expands to the exit code of the most recently completed command.
+# "$$" expands to PID number of the current shell.
+# "$!" expands to PID of the most recently executed background command.
+# "$_" Expands to the last argument of the last executed command.
