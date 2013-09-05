@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Regular expressions (regex) are similar to glob patters,
+# but they can only be used for pattern matching, not for filename
+# matching.
+
+# then, there is Brace expansion.
+
+echo th{e,a}n
+echo {/home/*,/root}/.*profile
+echo {1..9}
+echo {0,1}{0..9}
+
