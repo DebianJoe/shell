@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mkdir d && cd d #&& == AND, whereas || is OR, like C.
