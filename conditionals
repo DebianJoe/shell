@@ -1,3 +1,5 @@
 #!/bin/bash
 
-mkdir d && cd d #&& == AND, whereas || is OR, like C.
+mkdir d && cd d/ || echo "Nope!" #&& == AND, whereas || is OR, like C.
+
+
