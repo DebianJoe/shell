@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# There are a lot of  [ and [[ tests in bash.
+
+#-e FILE: true if file exists
+#-f FILE: true if file is regular file
+#-d FILE: true if file is a directory
+#-h FILE: true if file is symlink
+#-p FILE: true if pipe exists
+#-r FILE: true if file is readable by you.
+#-s FILE: true if file exists and is not empty.
+#-t FD  : true if FD is opened in a terminal
+#-w FILE: true if file is writable by you.
+#-x FILE: true if file is executable by you.
+#-O FILE: true if file is owned by you.
+#-G FILE: true if file is owned by your group.
+#FILE -nt FILE: true if first file is newer than second.
+#FILE -ot FILE: true if first file is older than second.
+#-z String: true if file is empty (its length is zero)
+#-n String: true if file is non-empty (if its length is non-zero)
+# STRING = STRING: true if first and second string are identical.
+# STRING != STRING: true if first and second string are NOT identical.
+# STRING < STRING: obvious
+# STRING > STRING: also obvious.
+# EXPR -a EXPR: true if both expressions are true (boolean AND)
+# EXPR -o EXPR: true is either expression is true (boolean OR)
+# INT -eq INT: true if both integers are equal.
+# INT -ne INT: not equal, integers.
+# INT -lt INT: Less than, integers.
+# INT -gt INT: Greater than, integers.
+# INT -le INT: Less than or equal
+# INT -ge INT: Greater than or equal.
+# String =(or ==) PATTERN: pattern matching, true if string matches glob.
+# STRING =~REGEX: true if string matches regex pattern.
+# ( EXPR ): to change evaluation precedence, Order of Operations.
+# EXPR && EXPR: much like -a, but doesn't check 2nd if first is false.
+# EXPR || EXPR: Like -o, but doesn't check 2nd if first is true.
+
+# Examples.
+
+test -e /etc/X11/xorg.conf && echo 'Your Xorg is Configured!'
+test -n "$HOME" && echo 'Your homedir is set!'
+[[ boar != bear ]] && echo "Boars aren't bears."
+[[ boar != b?ar ]] && echo "Boars don't look like bears."
+[[ $DISPLAY ]] && echo "Display variable set @ $DISPLAY"
+[[ ! $DISPLAY ]] && echo "Your Display variable is not set."
