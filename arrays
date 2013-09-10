@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#names=("Bob" "Peter" "$USER" "Big Bad John")
+
+# You can create a 'sparse array' by defining the array position
+# names=([0]="Bob" [1]="Peter" [20]="$USER" [21]="Big Bad John")
+# or call out initial positions in the array
+# names[0]="Bob"
+
+# Globbing works for making filename arrays
+
+source=(~/C/*.c)
+echo "${source[@]}"
+
+# the bottom is an array expansion.
+# let's index these:
+
+echo "The first file is: ${source[0]}"
+echo "The second file is: ${source[1]}"
+
+# it may be confusing to see the delimiters in an array, so use IFS
+# to mmake it easier to determine where they split
+
+( IFS=,; echo "All source file in ~/C are: ${source[*]}" )
+
+# also the # character can call the number of items in an array
+
+echo "The total number of source files is: ${#source[@]}"
+
