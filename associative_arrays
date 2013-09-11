@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Associative Arrays must be declared
+declare -A fullNames
+
+# then it is indexed like a dict
+fullNames=( ["joe"]="Debian Joe" ["pidsley"]="Pidsley Oppenheimer" )
+
+echo "Current user is: $USER. Full name: ${fullNames[$USER]}."
+echo ""
+
+for user in "${!fullNames[@]}"
+    do echo "User: $user, fullname: ${fullNames[$user]}."; done
+
+# much like a python dict, the order is unpredictable.
