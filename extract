@@ -1,7 +1,15 @@
 #!/bin/bash
 echo "extracting $1"
 
+if [ -n "$2" ]; then
+	echo "You have too many arguments for this script."
+	echo "if the filename has spaces, then unpack manually"
+	exit 1
+fi
+
 if [[ $(echo "$1" | tail -c -8) == ".tar.gz" ]]; then
     $(tar -zxvf $1)
-else echo "error"
+elif [[ $(echo "$1" | tail -c -9) == ".tar.bz2" ]]; then
+	$(tar -xvjf $1)
+else echo "Ending pattern does not match"
 fi
