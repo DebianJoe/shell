@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "extracting $1"
+
+case "$1" in
+	*.tar.bz)
+		tar -xjvf $1
