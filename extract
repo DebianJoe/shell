@@ -10,6 +10,8 @@ fi
 if [[ $(echo "$1" | tail -c -8) == ".tar.gz" ]]; then
     $(tar -zxvf $1)
 elif [[ $(echo "$1" | tail -c -9) == ".tar.bz2" ]]; then
-	$(tar -xvjf $1)
+    $(tar -xvjf $1)
+elif [[ $(echo "$1" | tail -c -8) == ".tar.bz" ]]; then
+    $(tar -xvjf $1)
 else echo "Ending pattern does not match"
 fi
