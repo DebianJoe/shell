@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "extracting $1"
 
-case "$1" in
-	*.tar.bz)
-		tar -xjvf $1
+if [[ $(echo "$1" | tail -c -8) == ".tar.gz" ]]; then
+    $(tar -zxvf $1)
+else echo "error"
+fi
