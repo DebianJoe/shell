@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/zsh
 
-rm -i $(find ./ -name '*~' -or -name ".*~") || echo "No backup files found."
-rm -i $(find ./ -name "$(date +%Y)*") || echo "No scrots found"
+rm -i $(find ./ -name "*~" -print0 | xargs -0) ]
+rm -i $(find ./ -name ".*~" -print0 | xargs -0)
+rm -i $(find ./ -name "$(date +%Y)*.png")
