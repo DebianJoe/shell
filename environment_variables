@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Environment variables are like regular shell varaiables, but are
+# set when the shell boots.
+#
+# Traditionally, they should be the only 'all caps' variables in
+# the scripts.
+#
+# to set a new environment variable use
+# export MYVAR=something
+
+if [[ $DISPLAY ]]; then
+    xterm -e top
+else
+    top
+fi
+
+# The above uses Xterm, but only if there is a $DISPLAY environment
+# variable set.  IE: you're using an Xserver.
