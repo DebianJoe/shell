@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# The argvs for bash can be referred to as $1 (pos 1) $2 (pos 2)
+# and so on.  Above 10, they should be bracketed. ${10}, etc.
+#
+# In addition to referring to them one at a time, you can also call
+# the entire set with "$@" substitution.  The ""<-quotes are very 
+# important here.
+#
+# You can also eliminate each one as it is used with the 'shift' command
+# try to give this script a few arguements.
+
+
+echo "Here are your variables."
+echo "$@"
+echo "string 1 is $1"
+echo "Until we shift it."
+shift
+echo "Now it's $1"
