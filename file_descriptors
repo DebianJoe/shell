@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# File descriptors are the way that programs refer to files or
+# to resources that work like files "pipes, sockets, terminals"
+# By default, every new process starts with three open
+# FD's: 
+# stdin(standard input)
+# stdout(standard output)
+# stderr(standard error)
+#
+
+read -p "What is your name? " name; echo "Good day, $name.  Would you like some tea?"
+
+# 'read' is a command that reads from stdin and stores it in
+# a variable.  'echo' sends it's output through stdout
+# stderr is what shows "rm: cannot remove `filenaem'"
+# in shell scripts, FD's are always referenced by number.
+#
+# Let's send something to stderr, just for fun.
+
+echo "Uh oh. Bad things have happened.." >&2
+
+# FD 0 is stdin
+# FD 1 is stdout
+# FD 2 is stderr
