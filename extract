@@ -14,7 +14,8 @@ if [ -f $1 ] ; then
             ;;
         *.rar)
             unrar x $1
-            *.gz)
+            ;;
+	*.gz)
             gunzip $1
             ;;
         *.tar)
