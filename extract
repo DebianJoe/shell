@@ -1,17 +1,40 @@
 #!/bin/bash
 echo "extracting $1"
 
-if [ -n "$2" ]; then
-	echo "You have too many arguments for this script."
-	echo "if the filename has spaces, then unpack manually"
-	exit 1
+if [ -f $1 ] ; then
+    case $1 in
+        *.tar.bz2)
+            tar -xvjf $1
+            ;;
+        *.tar.gz)
+            tar -xvzf $1
+            ;;
+        *.bz2)
+            bunzip2 $1
+            ;;
+        *.rar)
+            unrar x $1
+            ;;
+	*.gz)
+            gunzip $1
+            ;;
+        *.tar)
+            tar -xf $1
+            ;;
+        *.tbz2)
+            tar -xvzf $1
+            ;;
+        *.tgz)
+            tar -xvzf $1
+            ;;
+        *.zip)
+            unzip $1
+            ;;
+        *.Z)
+            uncompress $1
+            ;;
+    esac
+else
+    echo "$1 is not a valid file"
 fi
 
-if [[ $(echo "$1" | tail -c -8) == ".tar.gz" ]]; then
-    $(tar -zxvf $1)
-elif [[ $(echo "$1" | tail -c -9) == ".tar.bz2" ]]; then
-    $(tar -xvjf $1)
-elif [[ $(echo "$1" | tail -c -8) == ".tar.bz" ]]; then
-    $(tar -xvjf $1)
-else echo "Ending pattern does not match"
-fi
