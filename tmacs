@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ $# -lt 2 ]
+then
+    tmux new-window -a -n Window2
+    tmux rename-window "T-macs"
+    tmux split-window -h
+    tmux last-pane
+    tmux send-keys "emacs -nw" C-m
+    tmux last-pane
+    tmux split-window -p80
+    tmux last-pane
+    tmux split-window -h
+    tmux send-keys "tty-clock" C-m
+    tmux last-pane
+    tmux send-keys "cal" C-m
+    tmux last-pane
+fi
