@@ -1,7 +1,6 @@
-#!/bin/sh
-
-if [ $# -lt 2 ]
-then
+#!/bin/bash
+argv1=$1
+if [ $argv1 -lt 1 ]; then
     tmux new-window -a -n Window2
     tmux rename-window "T-macs"
     tmux split-window -h
@@ -15,4 +14,13 @@ then
     tmux last-pane
     tmux send-keys "cal" C-m
     tmux last-pane
+elif [[ $argv1 == "bottom" ]]; then
+    tmux split-window -v
+    tmux split-window -h
+    tmux select-pane -t 0
+elif [[ $argv1 == "top" ]]; then
+    tmux split-window -v
+    tmux last-pane
+    tmux split-window -h
+    tmux select-pane -t 0
 fi
