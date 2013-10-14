@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 backs=$(find ./ -name "*~" -print0 | xargs -0)
 dotbacks=$(find ./ -name ".*~" -print0 | xargs -0)
