@@ -37,4 +37,3 @@ if [ -f $1 ] ; then
 else
     echo "$1 is not a valid file"
 fi
-
