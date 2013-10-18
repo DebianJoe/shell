@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # sed uses \ or | or : as a delimiter to escape /'s #
-echo $(ls -a "/home/$USER/") | sed 's/:/(&) :/'
+find ~/ -name ".git" | sed -e 's/\.git//'
