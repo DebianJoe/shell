@@ -1,3 +1,5 @@
 # sed 's/abc/(abc)/' only works if you know EXACTLY what you
 # sed 's/[a-z]*/(&)/' works for random lowercase pattern matches.
-
+# at the beginning of the line.
+# sed 's/ * /_/g' will replace all spaces with underscores.
+# sed 's/ */_/g' will put underscores between each character.
