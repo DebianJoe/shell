@@ -4,7 +4,8 @@
 declare -A fullNames
 
 # then it is indexed like a dict
-fullNames=( ["joe"]="Debian Joe" ["pidsley"]="Pidsley Oppenheimer" )
+fullNames=( ["joe"]="Debian Joe" ["ivan"]="David Letters_I_do_not_have" \
+["bacon"]="Jules Das Machine")
 
 echo "Current user is: $USER. Full name: ${fullNames[$USER]}."
 echo ""

@@ -19,11 +19,10 @@ echo "The first file is: ${source[0]}"
 echo "The second file is: ${source[1]}"
 
 # it may be confusing to see the delimiters in an array, so use IFS
-# to mmake it easier to determine where they split
+# to make it easier to determine where they split
 
 ( IFS=,; echo "All source file in ~/C are: ${source[*]}" )
 
 # also the # character can call the number of items in an array
 
 echo "The total number of source files is: ${#source[@]}"
-
