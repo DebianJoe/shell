@@ -1,0 +1,3 @@
+# sed 's/abc/(abc)/' only works if you know EXACTLY what you
+# sed 's/[a-z]*/(&)/' works for random lowercase pattern matches.
+
