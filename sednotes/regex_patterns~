@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# ^A == "A" at the beginning of the line
+# A$ == "A" at the END of the line
+# A^ == "A" anywhere on the line
+# $A == "A" anywhere on the line
+# ^^ == "^" at the beginning of the line
+# $$ == "$" at the end of the line.

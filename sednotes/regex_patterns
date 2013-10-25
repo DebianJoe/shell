@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# ^A == "A" at the beginning of the line
+# A$ == "A" at the END of the line
+# A^ == "A" anywhere on the line
+# $A == "A" anywhere on the line
+# ^^ == "^" at the beginning of the line
+# $$ == "$" at the end of the line.
+
+cat testfile | sed -e 's/^t/T/g'
+# since line 2 starts with a "t", it is capitalized.
+
+cat testfile | sed -e 's/^[a-z]/(&)/g'
+# since line 2 is lowercase, it is the matched string, and is put in parenthesis.
