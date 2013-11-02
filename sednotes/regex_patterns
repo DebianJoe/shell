@@ -15,3 +15,6 @@ cat testfile | sed -e 's/^[a-z]/(&)/g'
 
 cat testfile | sed -e 's/at$/ow/g'
 # since line 1 ends with 'at' we replace it with 'ow'.
+# you could OFC use a pipe and cat to a new file with fixes:
+# ie: cat <file> | sed -e 's/^regex/newpattern/g' > newfile
+# to check that your changes worked correctly.
