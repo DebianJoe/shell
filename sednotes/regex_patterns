@@ -12,3 +12,6 @@ cat testfile | sed -e 's/^t/T/g'
 
 cat testfile | sed -e 's/^[a-z]/(&)/g'
 # since line 2 is lowercase, it is the matched string, and is put in parenthesis.
+
+cat testfile | sed -e 's/at$/ow/g'
+# since line 1 ends with 'at' we replace it with 'ow'.
