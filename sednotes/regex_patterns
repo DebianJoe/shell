@@ -18,3 +18,6 @@ cat testfile | sed -e 's/at$/ow/g'
 # you could OFC use a pipe and cat to a new file with fixes:
 # ie: cat <file> | sed -e 's/^regex/newpattern/g' > newfile
 # to check that your changes worked correctly.
+
+# or you can make a backup with (sed -i.bak 's/OLD_STRING/NEW_STRING/' > file
+# to make a sort of 'inline' edit
