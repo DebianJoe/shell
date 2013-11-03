@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-backups=$(find ./ -name "*~" -print0 | xargs -0)
-
-if [ -n "$backups" ]; then 
-    rm -i $(find ./ -name "*~" -print0 | xargs -0)
-fi
