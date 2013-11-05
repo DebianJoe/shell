@@ -8,3 +8,9 @@ echo $KITTY | sed 's/[a-z]*/(&)/'
 
 echo "$KITTY 123" | sed 's/[a-z][0-9]*/& &/'
 echo "$KITTY" | sed 's/[a-z][a-z]*/& & &/'
+
+# one of the more interesting points for sed is that
+# you can redirect from one file, into another
+# $ sed 's/here/there/g' <old >new
+# which will replace all occurences of "here" in the file 'old'
+# with the word 'there' in the word new.
