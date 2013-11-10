@@ -1,0 +1,5 @@
+#!/bin/bash
+
+head -$((${RANDOM} % `wc -l < file` + 1)) file | tail -1
+
+## This takes a file and picks 1 random line from it. ##
