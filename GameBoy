@@ -4,6 +4,7 @@ printf "\033[1;31mWelcome to Dad's Gameboy\033[1;m\n"
 printf "Press the Number for the Game you want.\n"
 echo "1).Legend of Zelda - Minnish Cup"
 echo "2.)Castlevania - Harmony of Dissonance"
+echo "3.)Pokemon - Crystal"
 
 read selection
 
@@ -11,4 +12,6 @@ if [ "$selection" == "1" ]; then
    $(mednafen ~/Downloads/Legend.zip)
 elif [ "$selection" == "2" ]; then
    $(mednafen ~/Downloads/Castle.zip)
+elif [ "$selection" == "3" ]; then
+    $(mednafen ~/Downloads/Pokemon_-_Crystal_Version.zip)
 fi
