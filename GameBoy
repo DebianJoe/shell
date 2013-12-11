@@ -1,0 +1,14 @@
+#!/bin/bash
+
+printf "\033[1;31mWelcome to Dad's Gameboy\033[1;m\n"
+printf "Press the Number for the Game you want.\n"
+echo "1).Legend of Zelda - Minnish Cup"
+echo "2.)Castlevania - Harmony of Dissonance"
+
+read selection
+
+if [ "$selection" == "1" ]; then
+   $(mednafen ~/Downloads/Legend.zip)
+elif [ "$selection" == "2" ]; then
+   $(mednafen ~/Downloads/Castle.zip)
+fi
