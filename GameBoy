@@ -4,14 +4,30 @@ printf "\033[1;31mWelcome to Dad's Gameboy\033[1;m\n"
 printf "Press the Number for the Game you want.\n"
 echo "1).Legend of Zelda - Minnish Cup"
 echo "2.)Castlevania - Harmony of Dissonance"
-echo "3.)Pokemon - Crystal"
+echo "3.)Pokemon - Crystal (Haiku)"
+echo "4.)Pokemon - Crystal (Malachi)"
+echo "5.)Pokemon - Crystal (Silas)"
 
 read selection
 
-if [ "$selection" == "1" ]; then
-   $(mednafen ~/Downloads/Legend.zip)
-elif [ "$selection" == "2" ]; then
-   $(mednafen ~/Downloads/Castle.zip)
-elif [ "$selection" == "3" ]; then
-    $(mednafen ~/Downloads/Pokemon_-_Crystal_Version.zip)
-fi
+case "$selection" in
+    "1")
+	$(mednafen ~/Downloads/Legend.zip)
+	;;
+    "2")
+	$(mednafen ~/Downloads/Castle.zip)
+	;;
+    "3")
+	$(mednafen ~/Downloads/Pokemon_-_Crystal_Version.zip)
+	;;
+    "4")
+	echo "Needs Malachi's setup"
+	;;
+    "5")
+	echo "Needs Silas's setup"
+	;;
+    *)
+	printf "\033[1;31mOh, noes...not a valid selection."
+	printf "\033[1;m\n"
+
+esac
