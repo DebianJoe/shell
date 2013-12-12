@@ -8,6 +8,104 @@ read system
 case $system in
     "1") #NES Chosen
 	echo "Nes games go here"
+	clear
+	printf "\033[1;31mWelcome to Dad's NES\033[1;m\n"
+	printf "Press the Number for the Game you want.\n"
+	echo "1).Bad Dudes"
+	echo "2).Battletoads and Double Dragon."
+	echo "3).Bomberman"
+	echo "4).Castlevania"
+	echo "5).Castlevania 3"
+	echo "6).Donkey Kong"
+	echo "7).Double Dragon"
+	echo "8).Excitebike"
+	echo "9).Kid Icarus"
+	echo "10).Kirby's Adventure"
+	echo "11).Legend of Zelda"
+	echo "12).Metroid"
+	echo "13).MicroMachines"
+	echo "14).Mike Tyson's Punch-out"
+	echo "15).Ninja Gaiden"
+	echo "16).Ninja Gaiden 2"
+	echo "17).Paperboy"
+	echo "18).Rampage"
+	echo "19).RC Pro Am"
+	echo "20).Super Mario Bros"
+	echo "21).Super Mario 3"
+	echo "22).Zelda 2, Adventures of Link"
+
+	read selection
+
+	case "$selection" in
+	    "1")
+		$(mednafen ~/Downloads/NES/Bad_Dudes.zip)
+		;;
+	    "2")
+		$(mednafen ~/Downloads/NES/Battletoads_\&_Double_Dragon_-_The_Ultimate_Team.zip)
+		;;
+	    "3")
+		$(mednafen ~/Downloads/NES/Bomberman.zip)
+		;;
+	    "4")
+		$(mednafen ~/Downloads/NES/Castlevania.zip)
+		;;
+	    "5")
+		$(mednafen ~/Downloads/NES/Castlevania_3_-_Dracula\'s_Curse.zip)
+		;;
+	    "6")
+		$(mednafen ~/Downloads/NES/Donkey_Kong.zip)
+		;;
+	    "7")
+		$(mednafen ~/Downloads/NES/Double_Dragon.zip)
+		;;
+	    "8")
+		$(mednafen ~/Downloads/NES/Excitebike.zip)
+		;;
+	    "9")
+		$(mednafen ~/Downloads/NES/Kid_Icarus.zip)
+		;;
+	    "10")
+		$(mednafen ~/Downloads/NES/Kirby\'s_Adventure.zip)
+		;;
+	    "11")
+		$(mednafen ~/Downloads/NES/Legend_of_Zelda,_The.zip)
+		;;
+	    "12")
+		$(mednafen ~/Downloads/NES/Metroid.zip)
+		;;
+	    "13")
+		$(mednafen ~/Downloads/NES/Micro_Machines_(Unl).zip)
+		;;
+	    "14")
+		$(mednafen ~/Downloads/NES/Mike_Tyson\'s_Punch-Out!!.zip)
+		;;
+	    "15")
+		$(mednafen ~/Downloads/NES/Ninja_Gaiden.zip)
+		;;
+	    "16")
+		$(mednafen ~/Downloads/NES/Ninja_Gaiden_2_-_The_Dark_Sword_of_Chaos.zip)
+		;;
+	    "17")
+		$(mednafen ~/Downloads/NES/Paperboy.zip)
+		;;
+	    "18")
+		$(mednafen ~/Downloads/NES/Rampage.zip)
+		;;
+	    "19")
+		$(mednafen ~/Downloads/NES/R.C._Pro-Am.zip)
+		;;
+	    "20")
+		$(mednafen ~/Downloads/NES/Super_Mario_Bros..zip)
+		;;
+	    "21")
+		$(mednafen ~/Downloads/NES/Super_Mario_Bros._3.zip)
+		;;
+	    "22")
+		$(mednafen ~/Downloads/NES/Zelda_2_-_The_Adventure_of_Link.zip)
+		;;
+	    *) echo "not a valid selection"
+		;;
+	esac
 	;;
     "2") #Gameboy Chosen
 	clear
