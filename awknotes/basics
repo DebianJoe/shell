@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Awk breaks each line passed to it into fields.  By
+# default, it uses spaces to delimit them
+
+echo one two | awk '{print $2}' #outputs 'two'
+echo one two | awk '{print $0}' #outputs ALL fields
