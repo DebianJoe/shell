@@ -5,3 +5,5 @@
 
 echo one two | awk '{print $2}' #outputs 'two'
 echo one two | awk '{print $0}' #outputs ALL fields
+awk '{print $0}' /etc/passwd | grep -i root #outputs the root user line of /etc/passwd
+awk '{print "foobar"}' /etc/passwd #prints 'foobar' for each line in /etc/passwd
