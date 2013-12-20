@@ -4,3 +4,4 @@
 # Awk can be used with regex to only process certain lines
 echo "I am a line" | awk '/^test/{print $2}'
 echo "test this out" | awk '/^test/{print $2}'
+echo "and this is a EOL example" | awk '/example$/{print $2}'
