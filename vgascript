@@ -4,7 +4,7 @@ monitor='xrandr | grep "VGA1 connected"'
 
 if [ -n "$monitor" ]; then #check to see if variable is non-empty
 	echo `xrandr --output VGA1 --auto --right-of LVDS1`
-	feh --bg-fill --no-xinerama ~/Downloads/pier.jpg
+	feh --bg-fill --no-xinerama ~/Downloads/fireworks.jpg
 else
 	echo `xrandr --output VGA1 --off`
 fi
