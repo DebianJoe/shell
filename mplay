@@ -1,0 +1,31 @@
+#!/bin/bash
+
+clear
+printf "\033[1;31mSelect Stream\033[1;m\n\n"
+printf "choose number and press enter\n"
+echo "1). Deepspace 1"
+echo "2). Doomed"
+echo "3). Folk Forward"
+echo "4). Lush"
+echo "5). Ambient Sleeping Pill"
+
+read selection
+case $selection in
+    "1") #Deepspace
+	$(mpg123 http://sfstream1.somafm.com:2800)
+	;;
+    "2") #Doomed
+	$(mpg123 http://sfstream1.somafm.com:8300)
+	;;
+    "3") #Folk Forward
+	$(mpg123 http://sfstream1.somafm.com:7400)
+	;;
+    "4") #Lush
+	$(mpg123 http://sfstream1.somafm.com:8800)
+	;;
+    "5") #ASP
+	$(mpg123 http://50.7.96.138:8530/stream)
+	;;
+    *)
+	echo "not a valid stream/selection"
+esac
